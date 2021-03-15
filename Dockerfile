@@ -19,6 +19,7 @@ RUN ln -s /usr/local/lib/nodejs/node-${NODE_VERSION}-${DISTRO}/bin/npx /usr/bin/
 
 RUN export PATH=/usr/local/lib/nodejs/node-${NODE_VERSION}-${DISTRO}/bin:$PATH
 RUN . ~/.profile
+RUN npm config set unsafe-perm true
 RUN rm -rf /node-${NODE_VERSION}-${DISTRO}.tar.xz
 
 #Install aws cli
